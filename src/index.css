@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Blue to Purple Theme */
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+    --surface: 0 0% 98%;
+    --surface-hover: 0 0% 96%;
+    
+    /* Card & Container Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --card-hover: 220 14% 97%;
+    
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    
+    /* Brand Colors - Blue to Purple Gradient */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 230 81% 56%;
+    --primary-light: 204 94% 94%;
+    
+    /* Secondary Brand Colors */
+    --secondary: 270 95% 75%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 280 100% 70%;
+    --secondary-light: 270 100% 98%;
+    
+    /* Neutral Colors */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --muted-dark: 215 28% 17%;
+    
+    /* Accent Colors */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 217 91% 55%;
+    
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Border & Input Colors */
+    --border: 220 13% 91%;
+    --border-hover: 217 32% 80%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    
+    /* Design System Properties */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-primary-subtle: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--surface)));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
+    --shadow: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -2px hsl(var(--primary) / 0.1);
+    --shadow-md: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -4px hsl(var(--primary) / 0.1);
+    --shadow-lg: 0 20px 25px -5px hsl(var(--primary) / 0.1), 0 8px 10px -6px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.1), 0 0 20px hsl(var(--primary) / 0.2);
+    
+    /* Animation Properties */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-bounce-subtle: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  }
+
+  .dark {
+    /* Background & Surface Colors - Dark Mode */
+    --background: 224 71% 4%;
+    --foreground: 0 0% 98%;
+    --surface: 224 71% 6%;
+    --surface-hover: 224 71% 8%;
+    
+    /* Card & Container Colors - Dark Mode */
+    --card: 224 71% 4%;
+    --card-foreground: 0 0% 98%;
+    --card-hover: 224 71% 6%;
+    
+    /* Popover Colors - Dark Mode */
+    --popover: 224 71% 4%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Brand Colors - Dark Mode */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 230 81% 56%;
+    --primary-light: 217 91% 15%;
+    
+    /* Secondary Brand Colors - Dark Mode */
+    --secondary: 270 95% 75%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 280 100% 70%;
+    --secondary-light: 270 95% 15%;
+    
+    /* Neutral Colors - Dark Mode */
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 11% 65%;
+    --muted-dark: 220 14% 96%;
+    
+    /* Accent Colors - Dark Mode */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 217 91% 55%;
+    
+    /* Status Colors - Dark Mode */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Border & Input Colors - Dark Mode */
+    --border: 215 28% 17%;
+    --border-hover: 215 28% 25%;
+    --input: 215 28% 17%;
+    --ring: 217 91% 60%;
+    
+    /* Gradients - Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-primary-subtle: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.2));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--surface)));
+    
+    /* Shadows - Dark Mode */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 20px hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Fluid Typography */
+  :root {
+    --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+    --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+    --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+    --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+    --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+    --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+    --font-size-6xl: clamp(3.75rem, 3rem + 3.75vw, 6rem);
+    --font-size-7xl: clamp(4.5rem, 3.5rem + 5vw, 8rem);
+    
+    /* Fluid Spacing - Improved for consistent ratios across devices */
+    --space-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+    --space-sm: clamp(0.75rem, 0.6rem + 0.75vw, 1.25rem);
+    --space-md: clamp(1rem, 0.8rem + 1vw, 1.75rem);
+    --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+    --space-xl: clamp(2rem, 1.6rem + 2vw, 3.5rem);
+    --space-2xl: clamp(3rem, 2.4rem + 3vw, 5rem);
+    --space-3xl: clamp(4rem, 3.2rem + 4vw, 7rem);
+    
+    /* Section Spacing */
+    --section-spacing-y: clamp(3rem, 2.5rem + 2.5vw, 6rem);
+    --section-spacing-x: clamp(1rem, 0.8rem + 1vw, 2rem);
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Custom Component Classes */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-bg {
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-bg-subtle {
+    background-image: var(--gradient-primary-subtle);
+  }
+
+  .surface-gradient {
+    background-image: var(--gradient-surface);
+  }
+
+  .card-gradient {
+    background-image: var(--gradient-card);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+
+  .btn-gradient {
+    @apply gradient-bg text-white font-semibold px-6 py-3 rounded-xl shadow-elegant hover:shadow-glow transition-smooth transform hover:-translate-y-1;
+  }
+
+  .btn-outline-gradient {
+    @apply border-2 border-primary text-primary bg-transparent font-semibold px-6 py-3 rounded-xl transition-smooth hover:gradient-bg hover:text-white hover:shadow-glow transform hover:-translate-y-1;
+  }
+
+  .card-interactive {
+    @apply bg-card rounded-2xl p-6 shadow-elegant hover:shadow-glow transition-smooth transform hover:-translate-y-2 cursor-pointer border border-border/50;
+  }
+
+  .skill-badge {
+    @apply bg-muted/50 text-foreground px-4 py-2 rounded-full text-sm font-medium border border-border/50 hover:border-primary/50 transition-smooth;
+  }
+
+  .section-padding {
+    padding-top: var(--section-spacing-y);
+    padding-bottom: var(--section-spacing-y);
+    padding-left: var(--section-spacing-x);
+    padding-right: var(--section-spacing-x);
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Responsive typography utilities */
+  .text-fluid-xs { font-size: var(--font-size-xs); }
+  .text-fluid-sm { font-size: var(--font-size-sm); }
+  .text-fluid-base { font-size: var(--font-size-base); }
+  .text-fluid-lg { font-size: var(--font-size-lg); }
+  .text-fluid-xl { font-size: var(--font-size-xl); }
+  .text-fluid-2xl { font-size: var(--font-size-2xl); }
+  .text-fluid-3xl { font-size: var(--font-size-3xl); }
+  .text-fluid-4xl { font-size: var(--font-size-4xl); }
+  .text-fluid-5xl { font-size: var(--font-size-5xl); }
+  .text-fluid-6xl { font-size: var(--font-size-6xl); }
+  .text-fluid-7xl { font-size: var(--font-size-7xl); }
+
+  /* Responsive spacing utilities - Enhanced with margin variants */
+  .space-fluid-xs { padding: var(--space-xs); }
+  .space-fluid-sm { padding: var(--space-sm); }
+  .space-fluid-md { padding: var(--space-md); }
+  .space-fluid-lg { padding: var(--space-lg); }
+  .space-fluid-xl { padding: var(--space-xl); }
+  .space-fluid-2xl { padding: var(--space-2xl); }
+  .space-fluid-3xl { padding: var(--space-3xl); }
+  
+  /* Margin variants */
+  .my-fluid-xs { margin-top: var(--space-xs); margin-bottom: var(--space-xs); }
+  .my-fluid-sm { margin-top: var(--space-sm); margin-bottom: var(--space-sm); }
+  .my-fluid-md { margin-top: var(--space-md); margin-bottom: var(--space-md); }
+  .my-fluid-lg { margin-top: var(--space-lg); margin-bottom: var(--space-lg); }
+  .my-fluid-xl { margin-top: var(--space-xl); margin-bottom: var(--space-xl); }
+  .my-fluid-2xl { margin-top: var(--space-2xl); margin-bottom: var(--space-2xl); }
+  .my-fluid-3xl { margin-top: var(--space-3xl); margin-bottom: var(--space-3xl); }
+  
+  .mx-fluid-xs { margin-left: var(--space-xs); margin-right: var(--space-xs); }
+  .mx-fluid-sm { margin-left: var(--space-sm); margin-right: var(--space-sm); }
+  .mx-fluid-md { margin-left: var(--space-md); margin-right: var(--space-md); }
+  .mx-fluid-lg { margin-left: var(--space-lg); margin-right: var(--space-lg); }
+  .mx-fluid-xl { margin-left: var(--space-xl); margin-right: var(--space-xl); }
+  .mx-fluid-2xl { margin-left: var(--space-2xl); margin-right: var(--space-2xl); }
+  .mx-fluid-3xl { margin-left: var(--space-3xl); margin-right: var(--space-3xl); }
+
+  /* Responsive image utilities */
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Responsive container utilities - Improved with consistent padding */
+  .container-fluid {
+    width: 100%;
+    padding-right: var(--section-spacing-x);
+    padding-left: var(--section-spacing-x);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+  }
+  
+  /* Gap utilities for consistent spacing between elements */
+  .gap-fluid-xs { gap: var(--space-xs); }
+  .gap-fluid-sm { gap: var(--space-sm); }
+  .gap-fluid-md { gap: var(--space-md); }
+  .gap-fluid-lg { gap: var(--space-lg); }
+  .gap-fluid-xl { gap: var(--space-xl); }
+  .gap-fluid-2xl { gap: var(--space-2xl); }
+  .gap-fluid-3xl { gap: var(--space-3xl); }
+}
